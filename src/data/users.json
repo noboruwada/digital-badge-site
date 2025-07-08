@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "tanaka@company.com",
+      "name": "田中太郎",
+      "completedTrainings": ["security-training"]
+    },
+    {
+      "email": "sato@company.com", 
+      "name": "佐藤花子",
+      "completedTrainings": ["security-training", "compliance-training"]
+    },
+    {
+      "email": "admin@company.com",
+      "name": "管理者",
+      "completedTrainings": ["security-training", "compliance-training", "leadership-training"]
+    }
+  ]
+}
