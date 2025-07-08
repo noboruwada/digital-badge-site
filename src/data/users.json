@@ -11,6 +11,11 @@
       "completedTrainings": ["security-training", "compliance-training"]
     },
     {
+      "email": "yamada@company.com",
+      "name": "山田次郎", 
+      "completedTrainings": []
+    },
+    {
       "email": "admin@company.com",
       "name": "管理者",
       "completedTrainings": ["security-training", "compliance-training", "leadership-training"]

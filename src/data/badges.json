@@ -4,19 +4,22 @@
       "id": "security-training",
       "name": "セキュリティ研修",
       "file": "/assets/badges/security-badge.png",
-      "description": "情報セキュリティ基礎研修修了証"
+      "description": "情報セキュリティ基礎研修修了証",
+      "password": "sec2024"
     },
     {
       "id": "compliance-training", 
       "name": "コンプライアンス研修",
       "file": "/assets/badges/compliance-badge.png",
-      "description": "企業コンプライアンス研修修了証"
+      "description": "企業コンプライアンス研修修了証",
+      "password": "comp2024"
     },
     {
       "id": "leadership-training",
       "name": "リーダーシップ研修", 
       "file": "/assets/badges/leadership-badge.png",
-      "description": "管理職向けリーダーシップ研修修了証"
+      "description": "管理職向けリーダーシップ研修修了証",
+      "password": "lead2024"
     }
   ]
 }
