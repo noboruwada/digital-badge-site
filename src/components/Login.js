@@ -65,11 +65,11 @@ const Login = ({ onLogin }) => {
           </button>
         </form>
         
-        <div style={{marginTop: '20px', fontSize: '14px', color: '#666'}}>
+        {/* <div style={{marginTop: '20px', fontSize: '14px', color: '#666'}}>
           <p><strong>テスト用アカウント:</strong></p>
           <p>📧 tanaka@company.com / 🔑 sec2024</p>
           <p>📧 admin@company.com / 🔑 admin2024</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
