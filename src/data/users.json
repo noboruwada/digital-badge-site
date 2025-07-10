@@ -1,24 +1,50 @@
 {
   "users": [
     {
-      "email": "tanaka@company.com",
-      "name": "田中太郎",
-      "completedTrainings": ["security-training"]
+      "email": "takada@moda",
+      "name": "高田 浩良",
+      "completedTrainings": [
+        "edu-int",
+        "edu-cert-aws-saa",
+        "train-az-iaas",
+        "train-az-paas",
+        "train-aws-iaas",
+        "train-aws-srvless",
+        "train-aws-migre"
+      ]
     },
     {
-      "email": "sato@company.com", 
-      "name": "佐藤花子",
-      "completedTrainings": ["security-training", "compliance-training"]
+      "email": "og-kawaguchi@moda",
+      "name": "川口 紘司",
+      "completedTrainings": [
+        "edu-int",
+        "train-az-iaas",
+        "train-az-paas"
+      ]
     },
     {
-      "email": "yamada@company.com",
-      "name": "山田次郎", 
-      "completedTrainings": []
+      "email": "adachi@moda",
+      "name": "足立 司",
+      "completedTrainings": [
+        "edu-int",
+        "edu-cert-aws-saa"
+      ]
     },
     {
-      "email": "admin@company.com",
-      "name": "管理者",
-      "completedTrainings": ["security-training", "compliance-training", "leadership-training"]
+      "email": "og-chikuse@moda",
+      "name": "築瀬 猛",
+      "completedTrainings": [
+        "edu-int",
+        "train-aws-migre"
+      ]
+    },
+    {
+      "email": "wada@moda",
+      "name": "和田 昇",
+      "completedTrainings": [
+        "train-aws-iaas",
+        "train-aws-srvless"
+      ]
     }
   ]
 }

@@ -1,0 +1,8 @@
+﻿id,name,description,password,filename
+edu-int,クラウド集中教育,クラウド集中教育 修了証,moda7428,edu-int
+edu-cert-aws-saa,クラウド資格対策研修 AWS中級（SAA）,クラウド資格対策研修 AWS中級（SAA） 修了証,moda3691,edu-cert-aws-saa.png
+train-az-iaas,クラウド実践研修 Azure-IaaS編,クラウド実践研修 Azure-IaaS編 修了証,moda8152,train-az-iaas.png
+train-az-paas,クラウド実践研修 Azure-PaaS編,クラウド実践研修 Azure-PaaS編 修了証,moda2047,train-az-paas.png
+train-aws-iaas,クラウド実践研修 AWS-IaaS編,クラウド実践研修 AWS-IaaS編 修了証,moda9365,train-aws-iaas.png
+train-aws-srvless,クラウド実践研修 AWS-サーバレス編,クラウド実践研修 AWS-サーバレス編 修了証,moda1784,train-aws-srvless.png
+train-aws-migre,クラウド実践研修 AWS-マイグレ編,クラウド実践研修 AWS-マイグレ編 修了証,moda6023,train-aws-migre.png

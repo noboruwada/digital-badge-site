@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "convert-data": "node scripts/convertCsvToJson.js",
+    "dev-with-data": "npm run convert-data && npm start"
   },
   "eslintConfig": {
     "extends": [
