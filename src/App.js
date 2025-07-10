@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import AdminPanel from './components/AdminPanel';
+import adminData from './data/admin.json';
 import './App.css';
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
       const userData = JSON.parse(savedUser);
       setUser(userData);
       
-      // 管理者判定
-      if (userData.email === 'admin@company.com') {
+      // 管理者判定（設定ファイルから動的取得）
+      const adminEmails = adminData.config.admins.map(admin => admin.email);
+      if (adminEmails.includes(userData.email)) {
         setIsAdmin(true);
       }
     }
@@ -26,8 +28,9 @@ function App() {
     setUser(userData);
     localStorage.setItem('currentUser', JSON.stringify(userData));
     
-    // 管理者判定
-    if (userData.email === 'admin@company.com') {
+    // 管理者判定（設定ファイルから動的取得）
+    const adminEmails = adminData.config.admins.map(admin => admin.email);
+    if (adminEmails.includes(userData.email)) {
       setIsAdmin(true);
     }
   };

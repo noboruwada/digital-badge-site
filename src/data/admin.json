@@ -1,0 +1,21 @@
+{
+  "config": {
+    "admins": [
+      {
+        "email": "admin@moda",
+        "name": "システム管理者",
+        "password": "modamoda5391"
+      },
+      {
+        "email": "admin2@moda",
+        "name": "副管理者",
+        "password": "modamoda3960"
+      }
+    ],
+    "settings": {
+      "multipleAdmins": true,
+      "defaultAdminPassword": "modamora5391",
+      "description": "管理者設定ファイル - 複数管理者追加可能"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 CSV to JSON 変換スクリプト開始 (数字1対応版)');
+console.log('🚀 CSV to JSON 変換スクリプト開始 (管理者設定外だし対応)');
 
 // CSVファイルを読み込む関数
 function readCSV(filePath) {
@@ -24,7 +24,45 @@ function readCSV(filePath) {
   });
 }
 
-// ユーザーデータを変換する関数（改良版）
+// 管理者設定を読み込む関数
+function readAdminConfig() {
+  const adminConfigPath = './data/admin.json';
+  
+  if (!fs.existsSync(adminConfigPath)) {
+    console.log('📋 admin.json が見つかりません。デフォルト設定を作成します...');
+    
+    // デフォルト設定を作成
+    const defaultAdminConfig = {
+      "admins": [
+        {
+          "email": "admin@company.com",
+          "name": "システム管理者", 
+          "password": "admin2024"
+        }
+      ],
+      "settings": {
+        "multipleAdmins": true,
+        "defaultAdminPassword": "admin2024",
+        "description": "管理者設定ファイル - メールアドレスとパスワードを変更する場合はここを編集してください"
+      }
+    };
+    
+    fs.writeFileSync(adminConfigPath, JSON.stringify(defaultAdminConfig, null, 2));
+    console.log('✅ デフォルトのadmin.jsonを作成しました');
+  }
+  
+  const adminConfig = JSON.parse(fs.readFileSync(adminConfigPath, 'utf8'));
+  console.log(`👑 管理者設定読み込み: ${adminConfig.admins.length}名`);
+  
+  // 管理者の詳細表示
+  adminConfig.admins.forEach((admin, index) => {
+    console.log(`   ${index + 1}. ${admin.name} (${admin.email})`);
+  });
+  
+  return adminConfig;
+}
+
+// ユーザーデータを変換する関数
 function convertUsers(csvUsers, badges) {
   console.log('👥 ユーザーデータを変換中...');
   
@@ -35,8 +73,8 @@ function convertUsers(csvUsers, badges) {
     badges.forEach(badge => {
       const trainingValue = csvUser[badge.id];
       
-      // 受講済みと判定する条件
-      if (isCompleted(trainingValue)) {
+      // 受講済みと判定する条件（数字1対応）
+      if (trainingValue === '1') {
         completedTrainings.push(badge.id);
       }
     });
@@ -49,38 +87,22 @@ function convertUsers(csvUsers, badges) {
   });
 }
 
-// 受講完了判定関数（柔軟性を追加）
-function isCompleted(value) {
-  if (!value) return false;
-  
-  const trimmedValue = value.toString().trim();
-  
-  // 受講済みと判定するパターン
-  const completedPatterns = [
-    '1',        // 半角数字の1
-    '１',       // 全角数字の１
-    '○',        // 全角マル
-    '◯',        // 白丸
-    '済',       // 済
-    '完了',     // 完了
-    'OK',       // OK
-    'ok',       // ok
-    'YES',      // YES
-    'yes',      // yes
-    'Y',        // Y
-    'y'         // y
-  ];
-  
-  return completedPatterns.includes(trimmedValue);
-}
-
 // バッジデータを変換する関数
 function convertBadges(csvBadges) {
   console.log('🏆 バッジデータを変換中...');
   
   return csvBadges.map(csvBadge => {
-    // ファイルパスの設定（filenameが指定されていない場合はIDベース）
-    const filename = csvBadge.filename || `${csvBadge.id}.png`;
+    // ファイル名の取得と拡張子の確認
+    let filename = csvBadge.filename || `${csvBadge.id}.png`;
+    
+    // 拡張子がない場合は .png を追加
+    if (!filename.toLowerCase().endsWith('.png') && 
+        !filename.toLowerCase().endsWith('.jpg') && 
+        !filename.toLowerCase().endsWith('.jpeg')) {
+      filename = filename + '.png';
+    }
+    
+    console.log(`バッジ ${csvBadge.id}: ${filename}`); // デバッグ用
     
     return {
       id: csvBadge.id,
@@ -108,48 +130,33 @@ function saveJSON(data, filePath, dataKey) {
 }
 
 // データ検証関数
-function validateData(usersCSV, badgesCSV) {
+function validateData(usersCSV, badgesCSV, adminConfig) {
   console.log('🔍 データ検証中...');
   
-  // バッジIDの重複チェック
-  const badgeIds = badgesCSV.map(badge => badge.id);
-  const duplicateBadgeIds = badgeIds.filter((id, index) => badgeIds.indexOf(id) !== index);
-  if (duplicateBadgeIds.length > 0) {
-    console.warn(`⚠️  重複するバッジID: ${duplicateBadgeIds.join(', ')}`);
+  // 管理者メールアドレスの重複チェック
+  const adminEmails = adminConfig.admins.map(admin => admin.email);
+  const duplicateAdminEmails = adminEmails.filter((email, index) => adminEmails.indexOf(email) !== index);
+  if (duplicateAdminEmails.length > 0) {
+    console.warn(`⚠️  重複する管理者メールアドレス: ${duplicateAdminEmails.join(', ')}`);
   }
   
-  // ユーザーメールアドレスの重複チェック
+  // ユーザーと管理者の重複チェック
   const userEmails = usersCSV.map(user => user.email);
-  const duplicateEmails = userEmails.filter((email, index) => userEmails.indexOf(email) !== index);
-  if (duplicateEmails.length > 0) {
-    console.warn(`⚠️  重複するメールアドレス: ${duplicateEmails.join(', ')}`);
-  }
-  
-  // users.csvの列名とbadges.csvのIDの整合性チェック
-  if (usersCSV.length > 0) {
-    const userHeaders = Object.keys(usersCSV[0]);
-    const missingColumns = badgeIds.filter(id => !userHeaders.includes(id));
-    const extraColumns = userHeaders.filter(header => 
-      !['email', 'name'].includes(header) && !badgeIds.includes(header)
-    );
-    
-    if (missingColumns.length > 0) {
-      console.warn(`⚠️  users.csvに不足している研修列: ${missingColumns.join(', ')}`);
-    }
-    if (extraColumns.length > 0) {
-      console.warn(`⚠️  users.csvの不要な列: ${extraColumns.join(', ')}`);
-    }
+  const overlappingEmails = adminEmails.filter(email => userEmails.includes(email));
+  if (overlappingEmails.length > 0) {
+    console.log(`📋 ユーザーと管理者の重複: ${overlappingEmails.join(', ')} (正常)`);
   }
   
   console.log('✅ データ検証完了');
 }
 
 // 統計情報表示関数
-function showStatistics(users, badges) {
+function showStatistics(users, badges, adminConfig) {
   console.log('');
   console.log('📊 変換統計情報:');
   console.log(`   👥 総ユーザー数: ${users.length}名`);
   console.log(`   🏆 総バッジ数: ${badges.length}個`);
+  console.log(`   👑 管理者数: ${adminConfig.admins.length}名`);
   
   // 各研修の受講率計算
   badges.forEach(badge => {
@@ -159,19 +166,14 @@ function showStatistics(users, badges) {
     const completionRate = users.length > 0 ? Math.round((completedCount / users.length) * 100) : 0;
     console.log(`   📈 ${badge.name}: ${completedCount}/${users.length}名 (${completionRate}%)`);
   });
-  
-  // 全研修完了者数
-  const allCompletedCount = users.filter(user => 
-    user.completedTrainings.length === badges.length
-  ).length;
-  console.log(`   🎉 全研修完了者: ${allCompletedCount}名`);
 }
 
 // メイン処理
 function main() {
   try {
-    // 1. CSVファイルを読み込み
-    console.log('📖 CSVファイルを読み込み中...');
+    // 1. 設定ファイルとCSVファイルを読み込み
+    console.log('📖 設定ファイルとCSVファイルを読み込み中...');
+    const adminConfig = readAdminConfig();
     const usersCSV = readCSV('./data/users.csv');
     const badgesCSV = readCSV('./data/badges.csv');
     
@@ -179,7 +181,7 @@ function main() {
     console.log(`🏆 バッジ数: ${badgesCSV.length}`);
     
     // 2. データ検証
-    validateData(usersCSV, badgesCSV);
+    validateData(usersCSV, badgesCSV, adminConfig);
     
     // 3. データを変換
     const badges = convertBadges(badgesCSV);
@@ -189,9 +191,10 @@ function main() {
     console.log('💾 JSONファイルに保存中...');
     saveJSON(users, './src/data/users.json', 'users');
     saveJSON(badges, './src/data/badges.json', 'badges');
+    saveJSON(adminConfig, './src/data/admin.json', 'config'); // 管理者設定も保存
     
     // 5. 統計情報表示
-    showStatistics(users, badges);
+    showStatistics(users, badges, adminConfig);
     
     console.log('');
     console.log('🎉 変換完了！');
@@ -199,7 +202,7 @@ function main() {
     console.log('🚀 次のコマンドでサイトを確認できます:');
     console.log('   npm start');
     console.log('');
-    console.log('💡 受講済み判定される文字: 1, １, ○, 済, 完了, OK, YES, Y');
+    console.log('⚙️ 管理者設定の変更は data/admin.json を編集してください');
     
   } catch (error) {
     console.error('❌ エラーが発生しました:', error.message);

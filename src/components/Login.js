@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import usersData from '../data/users.json';
 import badgesData from '../data/badges.json';
+import adminData from '../data/admin.json';
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ const Login = ({ onLogin }) => {
     // パスワード認証（研修パスワード + 管理者パスワード）
     const validPasswords = [
       ...badgesData.badges.map(badge => badge.password),
-      'admin2024' // 管理者用パスワード
+      ...adminData.config.admins.map(admin => admin.password) // 管理者パスワードを動的取得
     ];
     
     if (!validPasswords.includes(password)) {
@@ -64,12 +65,6 @@ const Login = ({ onLogin }) => {
             ログイン
           </button>
         </form>
-        
-        {/* <div style={{marginTop: '20px', fontSize: '14px', color: '#666'}}>
-          <p><strong>テスト用アカウント:</strong></p>
-          <p>📧 tanaka@company.com / 🔑 sec2024</p>
-          <p>📧 admin@company.com / 🔑 admin2024</p>
-        </div> */}
       </div>
     </div>
   );

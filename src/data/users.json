@@ -45,6 +45,16 @@
         "train-aws-iaas",
         "train-aws-srvless"
       ]
+    },
+    {
+      "email": "admin@moda",
+      "name": "システム管理者",
+      "completedTrainings": []
+    },
+    {
+      "email": "admin2@moda",
+      "name": "副管理者",
+      "completedTrainings": []
     }
   ]
 }

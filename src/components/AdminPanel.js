@@ -103,12 +103,6 @@ const AdminPanel = () => {
               </code>
             </div>
           ))}
-          <div style={{marginTop: '10px', padding: '10px', background: 'white', borderRadius: '5px'}}>
-            <strong>管理者パスワード:</strong> 
-            <code style={{background: '#f8f9fa', padding: '2px 6px', marginLeft: '10px', borderRadius: '3px'}}>
-              admin2024
-            </code>
-          </div>
         </div>
       </section>
     </div>
