@@ -1,8 +1,19 @@
 ﻿email,name,edu-int,edu-cert-aws-saa,train-az-iaas,train-az-paas,train-aws-iaas,train-aws-srvless,train-aws-migre
+admin@moda,システム管理者,,,,,,,
+admin2@moda,副管理者,,,,,,,
 takada@moda,高田 浩良,1,1,1,1,1,1,1
 og-kawaguchi@moda,川口 紘司,1,,1,1,,,
 adachi@moda,足立 司,1,1,,,,,
 og-chikuse@moda,築瀬 猛,1,,,,,,1
 wada@moda,和田 昇,,,,,1,1,
-admin@moda,システム管理者,,,,,,,
-admin2@moda,副管理者,,,,,,,
+nogami@moda,野上 蒼馬,,,,,1,,
+onishi@moda,大西 由記,,,,,1,,
+hashimoto-mi@moda,橋本 美里,,,,,1,,
+deguchi@moda,出口 典正,,,,,1,,
+takahashi-y@moda,高橋 優華,,,,,1,,
+obata-y@moda,小幡 優貴,,,,,1,,
+konda-t@moda,誉田 拓也,,,,,1,,
+okamoto-ka@moda,岡本 一真,,,,,1,,
+matsunaga@moda,松永 直樹,,,,,1,,
+hirano@moda,平野 正浩,,,,,1,,
+norinobu@moda,則信 良行,,,,,1,,

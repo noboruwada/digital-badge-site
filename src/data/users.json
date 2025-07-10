@@ -1,6 +1,16 @@
 {
   "users": [
     {
+      "email": "admin@moda",
+      "name": "システム管理者",
+      "completedTrainings": []
+    },
+    {
+      "email": "admin2@moda",
+      "name": "副管理者",
+      "completedTrainings": []
+    },
+    {
       "email": "takada@moda",
       "name": "高田 浩良",
       "completedTrainings": [
@@ -47,14 +57,81 @@
       ]
     },
     {
-      "email": "admin@moda",
-      "name": "システム管理者",
-      "completedTrainings": []
+      "email": "nogami@moda",
+      "name": "野上 蒼馬",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
     },
     {
-      "email": "admin2@moda",
-      "name": "副管理者",
-      "completedTrainings": []
+      "email": "onishi@moda",
+      "name": "大西 由記",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "hashimoto-mi@moda",
+      "name": "橋本 美里",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "deguchi@moda",
+      "name": "出口 典正",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "takahashi-y@moda",
+      "name": "高橋 優華",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "obata-y@moda",
+      "name": "小幡 優貴",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "konda-t@moda",
+      "name": "誉田 拓也",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "okamoto-ka@moda",
+      "name": "岡本 一真",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "matsunaga@moda",
+      "name": "松永 直樹",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "hirano@moda",
+      "name": "平野 正浩",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "norinobu@moda",
+      "name": "則信 良行",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
     }
   ]
 }
