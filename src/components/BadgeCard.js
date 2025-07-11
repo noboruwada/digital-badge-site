@@ -79,11 +79,6 @@ const BadgeCard = ({ badge, available }) => {
       <h4>{badge.name}</h4>
       <p>{badge.description}</p>
       
-      {/* デバッグ用：ファイルパス表示 */}
-      <div style={{fontSize: '10px', color: '#666', marginBottom: '5px'}}>
-        パス: {badge.file}
-      </div>
-      
       {available ? (
         <button 
           onClick={handleDownload}
