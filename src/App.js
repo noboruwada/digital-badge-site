@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>🏆 デジタルバッジ管理システム</h1>
+        <h1>🏆 モダトレデジタルバッジ</h1>
         <div className="user-info">
           <span>ようこそ、{user.name}さん</span>
           {isAdmin && <span style={{color: '#ffd700'}}>👑 管理者</span>}

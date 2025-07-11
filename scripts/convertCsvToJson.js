@@ -73,8 +73,8 @@ function convertUsers(csvUsers, badges) {
     badges.forEach(badge => {
       const trainingValue = csvUser[badge.id];
       
-      // 受講済みと判定する条件（数字1対応）
-      if (trainingValue === '1') {
+      // 受講済みと判定する条件（数字1以上対応）
+      if (!isNaN(trainingValue) && Number(trainingValue) >= 1) {
         completedTrainings.push(badge.id);
       }
     });

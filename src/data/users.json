@@ -57,64 +57,456 @@
       ]
     },
     {
+      "email": "kishi@moda",
+      "name": "岸 貴雄",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "satou-no@moda",
+      "name": "佐藤 伸彦",
+      "completedTrainings": []
+    },
+    {
+      "email": "ohtsuka-y@moda",
+      "name": "大塚 千代",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "higashida@moda",
+      "name": "東田 沙弥",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "miyoshi-y@moda",
+      "name": "三好 裕大",
+      "completedTrainings": [
+        "edu-int",
+        "edu-cert-aws-saa",
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "sugimoto-h@moda",
+      "name": "杉本 花",
+      "completedTrainings": [
+        "edu-int",
+        "edu-cert-aws-saa",
+        "train-az-iaas",
+        "train-az-paas",
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "yamashita@moda",
+      "name": "山下 智加",
+      "completedTrainings": []
+    },
+    {
+      "email": "nishimoto-t@moda",
+      "name": "西本 太洋",
+      "completedTrainings": []
+    },
+    {
+      "email": "matsumoto-r@moda",
+      "name": "松本 良太",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "hirami@moda",
+      "name": "平見 美佳",
+      "completedTrainings": [
+        "edu-cert-aws-saa",
+        "train-az-iaas",
+        "train-az-paas",
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "azuma-y@moda",
+      "name": "東 優輝",
+      "completedTrainings": []
+    },
+    {
+      "email": "hira@moda",
+      "name": "平 侑真",
+      "completedTrainings": []
+    },
+    {
       "email": "nogami@moda",
       "name": "野上 蒼馬",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
+      ]
+    },
+    {
+      "email": "tanaka-yo@moda",
+      "name": "田中 洋輔",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "yamaguchi-t@moda",
+      "name": "山口 拓也",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "hirakawa-c@moda",
+      "name": "平川 千博",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "hatatani@moda",
+      "name": "畑谷 大樹",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
       ]
     },
     {
       "email": "onishi@moda",
       "name": "大西 由記",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
       ]
     },
     {
       "email": "hashimoto-mi@moda",
       "name": "橋本 美里",
       "completedTrainings": [
+        "train-az-iaas"
+      ]
+    },
+    {
+      "email": "sakurai@moda",
+      "name": "櫻井 綾乃",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "fujii-t@moda",
+      "name": "藤井 智謙",
+      "completedTrainings": [
         "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "awamura@moda",
+      "name": "粟村 燿介",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
       ]
     },
     {
       "email": "deguchi@moda",
       "name": "出口 典正",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
+      ]
+    },
+    {
+      "email": "oorui@moda",
+      "name": "大類 慎也",
+      "completedTrainings": [
+        "edu-int"
       ]
     },
     {
       "email": "takahashi-y@moda",
       "name": "高橋 優華",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
       ]
     },
     {
       "email": "obata-y@moda",
       "name": "小幡 優貴",
       "completedTrainings": [
+        "train-az-iaas"
+      ]
+    },
+    {
+      "email": "kouchi@moda",
+      "name": "幸地 淳子",
+      "completedTrainings": [
+        "edu-cert-aws-saa"
+      ]
+    },
+    {
+      "email": "hasegawa-ha@moda",
+      "name": "長谷川 陽之",
+      "completedTrainings": [
         "train-aws-iaas"
       ]
+    },
+    {
+      "email": "iimura@moda",
+      "name": "飯村 ひかり",
+      "completedTrainings": []
+    },
+    {
+      "email": "tsuchiya@moda",
+      "name": "土屋 航平",
+      "completedTrainings": [
+        "edu-cert-aws-saa"
+      ]
+    },
+    {
+      "email": "mishiro@moda",
+      "name": "三代 祐子",
+      "completedTrainings": [
+        "edu-cert-aws-saa"
+      ]
+    },
+    {
+      "email": "sano-s@moda",
+      "name": "佐野 紗智恵",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "imaizumi@moda",
+      "name": "今泉 愛菜",
+      "completedTrainings": [
+        "edu-int",
+        "edu-cert-aws-saa"
+      ]
+    },
+    {
+      "email": "yamada-yu@moda",
+      "name": "山田 祐規",
+      "completedTrainings": [
+        "edu-cert-aws-saa"
+      ]
+    },
+    {
+      "email": "sabu@moda",
+      "name": "佐武 夏子",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "yamaguchi-s@moda",
+      "name": "山口 晋一郎",
+      "completedTrainings": [
+        "train-aws-iaas"
+      ]
+    },
+    {
+      "email": "yamamoto-n@moda",
+      "name": "山元 直樹",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "maruyama-t@moda",
+      "name": "丸山 高廣",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "koike@moda",
+      "name": "小池 志門",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "mori-n@moda",
+      "name": "森 記男",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "nakatani@moda",
+      "name": "中谷 俊",
+      "completedTrainings": []
     },
     {
       "email": "konda-t@moda",
       "name": "誉田 拓也",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
       ]
+    },
+    {
+      "email": "onishi-k@moda",
+      "name": "大西 和弥",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "kawakami@moda",
+      "name": "河上 洋平",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "nagasaka-m@moda",
+      "name": "長坂 まゆみ",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "sakamoto-k@moda",
+      "name": "阪本 恒平",
+      "completedTrainings": [
+        "edu-int",
+        "edu-cert-aws-saa"
+      ]
+    },
+    {
+      "email": "ohno@moda",
+      "name": "大野 哲史",
+      "completedTrainings": []
+    },
+    {
+      "email": "satou-y@moda",
+      "name": "佐藤 祐太",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "sugino@moda",
+      "name": "杉野 善則",
+      "completedTrainings": []
+    },
+    {
+      "email": "kitaoka@moda",
+      "name": "北岡 佐和子",
+      "completedTrainings": []
+    },
+    {
+      "email": "kuwahara@moda",
+      "name": "桑原 萌衣",
+      "completedTrainings": []
+    },
+    {
+      "email": "nedu@moda",
+      "name": "根津 貴史",
+      "completedTrainings": []
     },
     {
       "email": "okamoto-ka@moda",
       "name": "岡本 一真",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
+      ]
+    },
+    {
+      "email": "miyake-y@moda",
+      "name": "三宅 陽介",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "tamaki@moda",
+      "name": "玉木 琴絵",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
       ]
     },
     {
       "email": "matsunaga@moda",
       "name": "松永 直樹",
+      "completedTrainings": [
+        "train-az-iaas"
+      ]
+    },
+    {
+      "email": "shimmoto@moda",
+      "name": "新本 舞羽",
+      "completedTrainings": []
+    },
+    {
+      "email": "fukui@moda",
+      "name": "福井 萌斗",
+      "completedTrainings": [
+        "edu-int"
+      ]
+    },
+    {
+      "email": "shimizu-t@moda",
+      "name": "清水 柊伍",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "furugou@moda",
+      "name": "古郷 亜紀",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "yagura@moda",
+      "name": "矢倉 正悟",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "kaji@moda",
+      "name": "鍛治 倖也",
+      "completedTrainings": [
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "sokawa@moda",
+      "name": "寒川 航志",
+      "completedTrainings": [
+        "edu-int",
+        "train-az-iaas",
+        "train-az-paas"
+      ]
+    },
+    {
+      "email": "honda@moda",
+      "name": "本田 洸",
       "completedTrainings": [
         "train-aws-iaas"
       ]
@@ -123,14 +515,14 @@
       "email": "hirano@moda",
       "name": "平野 正浩",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
       ]
     },
     {
       "email": "norinobu@moda",
       "name": "則信 良行",
       "completedTrainings": [
-        "train-aws-iaas"
+        "train-az-iaas"
       ]
     }
   ]

@@ -38,7 +38,8 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h2>🔐 ログイン</h2>
+        <h2>🏆 モダトレデジタルバッジ</h2>
+        <h3>🔐 ログイン</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>メールアドレス:</label>
